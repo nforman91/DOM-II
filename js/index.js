@@ -1,15 +1,11 @@
 // Your code goes here
-const navChg = document.querySelector('.nav-link');
-// const headerChg = document.querySelector('.h2');
-// const buttonChg = document.querySelector('.btn');
-// const imgChg = document.querySelector('.img-fluid-rounded')
-// const textChg = document.querySelector('.destination');
-const footerChg = document.querySelector('.footer');
 
 //1.
+const navChg = document.querySelector('.nav-link');
 navChg.addEventListener('mouseover', function(event){
     navChg.style.color = "white";
     navChg.style.backgroundColor = "black";
+    navChg.style.transform = "rotate(20deg)"
 })
 
 //2.
@@ -21,53 +17,88 @@ function rKey(event){
 document.addEventListener('keydown', rKey)
 
 //3.
-// headerChg.addEventListener('ondragstart', function(event){
-//     console.log("Wheel works");
-//     headerChg.style.backgroundColor = "black";
-// })
-
-//4.
-// buttonChg.addEventListener('load', function(event){
-//     buttonChg.style.width = "100px";
-// })
-
-//5.
-// textChg.addEventListener('focus', function(event){
-//     console.log("Text works")
-//     textChg.textContent = "Crazy stuff";
-// })
-
-//6.
-// Chg.addEventListener('resize', function (event) {
-//     Chg.style. = "";
-// })
-
-//7.
-// Chg.addEventListener('scroll', function (event) {
-//     Chg.style. = "";
-// })
-
-//8.
-// imgChg.addEventListener('select', function (event) {
-//     imgChg.style.width = "20px";
-// })
-
-//9.
+const footerChg = document.querySelector('.footer');
 footerChg.addEventListener('dblclick', function (event) {
     footerChg.style.backgroundColor = "green";
 })
 
-//10.
-// Chg.addEventListener('drag', function (event) {
+//4.
+const headerChg = document.querySelector('h2');
+headerChg.addEventListener('click', function(event){
+    headerChg.style.transform = "rotate(20deg)";
+})
+
+//5.
+function wKey(event) {
+    if (event.key === 'w') {
+        alert('Winning!')
+    }
+}
+document.addEventListener('keyup', wKey)
+
+//6.
+const imgChg = document.querySelector('img')
+imgChg.addEventListener('mouseenter', function (event) {
+    imgChg.style.width = "50%";
+})
+
+//7.
+const titleChg = document.querySelector('h1')
+titleChg.addEventListener('hover', function (event) {
+    console.log(titleChg)
+    titleChg.style.textContent = "Changing title works";
+})
+
+//8.
+// Chg.addEventListener('', function (event) {
 //     Chg.style. = "";
 // })
+
+//9.
+// Chg.addEventListener('', function (event) {
+//     Chg.style. = "";
+// })
+
+//10.
+// Chg.addEventListener('', function (event) {
+//     Chg.style. = "";
+// })
+
+//X. Stop Propagation
+const textChg = document.querySelector('.text-content');
+textChg.addEventListener('click', function(event){
+    console.log("Inside text change on click")
+    textChg.textContent = "Text change works";
+    event.stopPropagation();
+})
+
+//Y. Prevent Default
+// const navChg = document.querySelector('a');
+// navChg.addEventListener('', function(event){
+//      navChg.stoprefresh
+//      event.preventDefault();
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 //TESTSTUFF
-const txt = document.querySelector('inverse-content .text-content')
-txt.addEventListener('mousemove', event => {
-    txt.style.backgroundColor = "red";
-    txt.style.color = "white";
-})
+// const txt = document.querySelector('inverse-content .text-content')
+// txt.addEventListener('mousemove', event => {
+//     txt.style.backgroundColor = "red";
+//     txt.style.color = "white";
+// })
