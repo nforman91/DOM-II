@@ -1,4 +1,4 @@
-// Your code goes here
+// Event listeners for 10 different types of events
 
 //1. mouseover
 const navChg = document.querySelector('.nav-link');
@@ -68,6 +68,7 @@ headerChg.addEventListener('copy', function (event) {
     headerChg.style.backgroundColor = "red";
 })
 
+
 //X. Stop Propagation
 const textChg = document.querySelector('.text-content');
 textChg.addEventListener('click', function(event){
@@ -76,8 +77,8 @@ textChg.addEventListener('click', function(event){
 })
 
 //Y. Prevent Default
-// const textChg = document.querySelector('.text-content');
-// textChg.addEventListener('click', function (event) {
-//     textChg.textContent = "Text change works";
-//     event.preventDefault();
-// })
+const navsChg = document.querySelector('.nav');
+navsChg.addEventListener('click', function (event) {
+    navsChg.textContent = "Text change works";
+    event.preventDefault();
+})
